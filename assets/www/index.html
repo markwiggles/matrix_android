@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matrix+</title>
+<link rel="stylesheet" href="js/jquery.mobile-1.2.0.min.css" />
+<link rel="stylesheet" href="js/jquery.mobile.structure-1.2.0.min.css" />
+<link rel="stylesheet" href="css/myStyles.css" />
+
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.spritely-0.6.js"></script>
+<script src="js/LightningTouch.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script src="scripts/functions.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script>
+
+</head>
+
+<body>
+	<div data-role="page" id="start" data-theme="a" class="ui-page">
+
+		<div class="content" data-role="content">
+
+			<div id="example">
+				<a id="btnEx1" data-role="button" class="ui-btn-right"
+					data-theme="b">11</a>
+				<p>+</p>
+				<a id="btnEx2" data-role="button" class="ui-btn-right"
+					data-theme="b">7</a>
+				<p>=</p>
+				<a data-role="button" class="ui-btn-right" data-theme="b">18</a>
+			</div>
+			<!--end #example-->
+
+			<div class="tips">
+				<div class="bullet">
+					<img src="img/arrow.png">
+				</div>
+				<p class="textTips">To win, eliminate all numbers!</p>
+			</div>
+			<!--end #tips-->
+			
+			
+			<canvas id="my-canvas" width="300" height="300" style="border: 1px dotted white;">
+			<p style="color: white;">no support for canvas</p>
+			
+			</canvas>
+			
+			
+			<script>testCanvas()</script>
+			
+			<footer data-position="fixed">
+				<a data-role="button" onclick="initNumbersPage()" data-theme="b"
+					data-icon="arrow-r" data-iconpos="right">Continue</a>
+			</footer>
+		</div>
+		<!--end content-->
+	</div>
+	<!--end page-->
+
+	<div data-role="page" id="numbers" data-theme="a" class="ui-page">
+
+
+		<div id="numHead" data-role="header" data-position="fixed"
+			data-theme="b">
+
+			<h2 id="timeHead">&nbsp:00</h2>
+
+			<a id="reset" href="#" data-role="button" data-inline="true"
+				class="ui-btn-right" onclick="main(playerLevel)" data-theme="b"
+				data-icon="refresh" data-iconpos="right">Reset</a> <a id="back"
+				data-role="button" data-inline="true" class="ui-btn-left"
+				onclick="goBack()" data-theme="b" data-icon="arrow-l">Back</a>
+
+		</div>
+		<!--end header-->
+
+		<div id="playerContent" class="content" data-role="content">
+
+			<div id="tickOrCross"></div>
+
+			<div data-role="popup" id="success" data-transition="pop"
+				class="ui-content" data-theme="b"></div>
+
+			<!--end #success-->
+
+			<div id="playerTips">
+
+
+
+				<div class="logo"
+					style="width: 200px; height: 200px; background: url('img/matrixLogo-sprite.png') 0 0;">
+				</div>
+		
+				<div class="tips">
+					<div class="bullet">
+						<img src="img/arrow.png">
+					</div>
+					<p class="textTips">Reset at any time with new numbers and a
+						new start time</p>
+				</div>
+
+				<div class="tips">
+					<div class="bullet">
+						<img src="img/arrow.png">
+					</div>
+					<p class="textTips">Tip: don't be left with a lot of the larger
+						numbers</p>
+				</div>
+
+				<div class="tips">
+					<div class="bullet">
+						<img src="img/arrow.png">
+					</div>
+					<p class="textTips">Choose your playing level</p>
+				</div>
+
+
+				<div id="level" data-role="fieldcontain">
+
+					<form>
+						<fieldset data-role="controlgroup" data-type="horizontal"
+							data-role="fieldcontain">
+
+							<input type="radio" name="level" id="easy" value="EASY" /> <label
+								for="easy">Easy</label> <input type="radio" name="level"
+								id="medium" value="MED" /> <label for="medium">Medium</label> <input
+								type="radio" name="level" id="hard" value="HARD" /> <label
+								for="hard">Hard</label>
+
+							<script>
+																		
+                                </script>
+
+						</fieldset>
+					</form>
+				</div>
+
+			</div>
+			<!--end #playerTips-->
+
+
+			<div id="btnList"></div>
+			<!--end #btnList-->
+
+
+			<footer id="playerFooter" data-position="fixed">
+				<a id="hit" href="#" data-role="button" onclick="main(playerLevel)"
+					data-theme="b" data-icon="arrow-r" data-iconpos="right">show
+					numbers</a>
+			</footer>
+
+
+
+
+		</div>
+		<!--end content-->
+	</div>
+	<!--end page-->
+</body>
+</html>

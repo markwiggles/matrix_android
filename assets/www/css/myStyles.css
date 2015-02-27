@@ -1,0 +1,135 @@
+.btnE,.btnO {
+	margin: 0.2em;
+	opacity: 0.2;
+}
+
+.ui-btn-inner {
+	min-width: 1.2em !important;
+	font-size: 1.3em !important;
+}
+
+.ui-btn-right,.ui-btn-left {
+	min-width: 0.8em !important;
+	font-size: 0.7em !important;
+}
+
+.logo {
+	margin: auto auto;
+}
+
+h1 {
+	height: 1.6em;
+}
+
+body {
+	text-align: center;
+}
+
+.ui-page {
+	padding-top: 20px !important;
+	background: #12283E !important;
+	background: transparent;
+}
+
+#startHead {
+	height: 3em;
+	display: none;
+}
+
+#btnList {
+	width: 98%;
+	margin: auto auto;
+}
+
+#tickOrCross {
+	width: 10em;
+	height: 10em;
+	position: absolute;
+	top: 10em;
+	left: 50%;
+	margin-left: -5em;
+	z-index: 2500;
+	background: no-repeat;
+	background-position: center;
+	background-size: 10em;
+}
+
+#success {
+	font-size: 1.6em;
+	text-align: center;
+	padding: .3em;
+	color: #387bbe;
+}
+
+.content {
+	text-align: center;
+}
+
+h4 {
+	text-align: center;
+}
+
+.bullet {
+	float: left;
+	display: inline;
+	margin-top: 1.2em;
+	margin-right: 10px;
+	width: 2em;
+}
+
+.textTips {
+	float: left;
+	display: inline;
+	text-align: left;
+	font-size: 1.1em;
+	width: 14em;
+}
+
+.tips {
+	clear: both;
+	width: 20em;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.tips p,#example p {
+	display: inline;
+	margin-top: 1em;
+	margin-bottom: .8em;
+}
+
+#example {
+	text-align: center;
+	clear: both;
+}
+
+#start h1 {
+	font-size: 1.3em;
+}
+
+#btnEx1,#btnEx2 {
+	background: green;
+}
+
+#numHead {
+	height: 3em;
+	display: none;
+}
+
+#timeHead {
+	font-size: 1.2em;
+	color: white;
+	background: #7c7e8a;
+	margin-top: .7em;
+	display: none;
+}
+
+#reset,#back,#test {
+	display: none;
+	margin: .5em;
+}
+
+#level fieldset {
+	margin: auto auto;
+	width: 20em;
+}
